@@ -27,7 +27,7 @@ const InviteMembers = ({ roomId }: { roomId: string }) => {
       }
 
       const response = await axios.post(
-        "http://localhost:4000/api/v1/workroom/room/add-user",
+        "https://huddle-api.onrender.com/api/v1/workroom/room/add-user",
         {
           roomId: roomId, // Pass the roomId
           email: email, // Pass the email of the user to add

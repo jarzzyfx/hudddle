@@ -33,7 +33,7 @@ const CreateWorkroom = () => {
 
       // Make the POST request to create a workroom
       const response = await axios.post(
-        "http://localhost:4000/api/v1/workroom/room/create",
+        "https://huddle-api.onrender.com/api/v1/workroom/room/create",
         { name: roomName }, // Payload
         {
           headers: {

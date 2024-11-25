@@ -35,7 +35,7 @@ export const fetchWorkrooms = async (): Promise<Workroom[] | null> => {
 
     // Make the API request
     const response = await axios.get<FetchWorkroomsResponse>(
-      "http://localhost:4000/api/v1/workroom/rooms",
+      "https://huddle-api.onrender.com/api/v1/workroom/rooms",
       {
         headers: {
           Authorization: `Bearer ${token}`, // Include token in headers

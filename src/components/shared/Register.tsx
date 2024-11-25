@@ -29,7 +29,7 @@ const Register: React.FC<RegisterProps> = ({ view, setView }) => {
 
     try {
       const response = await axios.post(
-        "http://localhost:4000/api/v1/user/register",
+        "https://huddle-api.onrender.com/api/v1/user/register",
         formData
       );
       console.log("Registration successful:", response.data);

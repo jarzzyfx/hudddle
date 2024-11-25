@@ -34,11 +34,14 @@ const PageDashboard: React.FC = () => {
         }
 
         // Fetch tasks from API
-        const response = await axios.get("http://localhost:4000/api/v1/tasks", {
-          headers: {
-            Authorization: `Bearer ${token}`, // Include token in headers
-          },
-        });
+        const response = await axios.get(
+          "https://huddle-api.onrender.com/api/v1/tasks",
+          {
+            headers: {
+              Authorization: `Bearer ${token}`, // Include token in headers
+            },
+          }
+        );
 
         console.log(response.data); // Debugging: Log API response
 

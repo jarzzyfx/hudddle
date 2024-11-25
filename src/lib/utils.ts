@@ -72,7 +72,7 @@ export const addToWorkroom = async (roomId: string, task: TaskTodayProps) => {
 
     // Make the API request to add the task to the workroom
     const response = await axios.post(
-      "http://localhost:4000/api/v1/workroom/room/add-task",
+      "https://huddle-api.onrender.com/api/v1/workroom/room/add-task",
       {
         roomId,
         taskId: task._id,
@@ -114,7 +114,7 @@ export const getUsersInWorkroom = async (
 
     // Make the GET request with the token in the Authorization header
     const response = await axios.get(
-      `http://localhost:4000/api/v1/workroom/room/users/${roomId}`,
+      `https://huddle-api.onrender.com/api/v1/workroom/room/users/${roomId}`,
       {
         headers: {
           Authorization: `Bearer ${token}`, // Include the token in the Authorization header

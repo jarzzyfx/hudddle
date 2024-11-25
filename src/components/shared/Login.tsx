@@ -29,7 +29,7 @@ const Login: React.FC = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:4000/api/v1/user/login",
+        "https://huddle-api.onrender.com/api/v1/user/login",
         {
           email: useremail,
           password: userpassword,
@@ -41,7 +41,7 @@ const Login: React.FC = () => {
 
       // Fetch tasks for the logged-in user
       const tasksResponse = await axios.get(
-        "http://localhost:4000/api/v1/tasks", // Adjust endpoint if needed
+        "https://huddle-api.onrender.com/api/v1/tasks", // Adjust endpoint if needed
         {
           headers: {
             Authorization: `Bearer ${user_token}`, // Pass token in headers

@@ -13,6 +13,7 @@ import {
 import { Plus, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import CreateTask from "@/components/shared/createTask";
 
 const AddTask = ({ roomId }: { roomId: string }) => {
   const [tasks, setTasks] = useState<any[]>([]); // Ensure tasks is an array
@@ -28,11 +29,14 @@ const AddTask = ({ roomId }: { roomId: string }) => {
           throw new Error("Authentication token not found.");
         }
 
-        const response = await axios.get("http://localhost:4000/api/v1/tasks", {
-          headers: {
-            Authorization: `Bearer ${token}`, // Include the token in the Authorization header
-          },
-        });
+        const response = await axios.get(
+          "https://huddle-api.onrender.com/api/v1/tasks",
+          {
+            headers: {
+              Authorization: `Bearer ${token}`, // Include the token in the Authorization header
+            },
+          }
+        );
 
         // Ensure response data is in the expected format
         if (Array.isArray(response.data)) {
@@ -109,9 +113,10 @@ const AddTask = ({ roomId }: { roomId: string }) => {
           See all
         </Link>
 
-        <Button className="bg-[#956FD6] text-white mx-auto px-16 ">
+        {/* <Button className="bg-[#956FD6] text-white mx-auto px-16 ">
           Create a new Task
-        </Button>
+        </Button> */}
+        <CreateTask />
       </footer>
     </div>
   );

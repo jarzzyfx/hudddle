@@ -35,11 +35,14 @@ const Golive = ({ roomId }: Props) => {
           throw new Error("Authentication token not found.");
         }
 
-        const response = await axios.get("http://localhost:4000/api/v1/tasks", {
-          headers: {
-            Authorization: `Bearer ${token}`, // Include the token in the Authorization header
-          },
-        });
+        const response = await axios.get(
+          "https://huddle-api.onrender.com/api/v1/tasks",
+          {
+            headers: {
+              Authorization: `Bearer ${token}`, // Include the token in the Authorization header
+            },
+          }
+        );
 
         // Ensure response data is in the expected format
         if (Array.isArray(response.data)) {
