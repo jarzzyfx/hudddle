@@ -27,7 +27,7 @@ const WorkroomPage = (props: Props) => {
           </HeaderActions>
         </HeaderTexts>
       </Header>
-      <WorkroomActions isInWorkroom />
+      <WorkroomActions />
       <Workrooms />
     </main>
   );

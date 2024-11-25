@@ -65,7 +65,8 @@ const Workrooms = (props: Props) => {
                   </div>
                   <Link href={`/workroom/${room._id}`}>
                     <Button className="bg-[#956FD6] text-white">
-                      <Plus className="w-[20px] h-[20px]" /> Add to workroom
+                      {" "}
+                      View Workroom
                     </Button>
                   </Link>
                 </TaskActions>

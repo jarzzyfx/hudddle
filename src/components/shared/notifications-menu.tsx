@@ -9,7 +9,7 @@ const NotificationsMenu = () => {
 
   useEffect(() => {
     // Establish a connection to the Socket.IO server
-    const socket = io("http://localhost:4000"); // Replace with your server's URL
+    const socket = io("https://huddle-api.onrender.com/"); // Replace with your server's URL
 
     socket.on("receiveInvitation", (data) => {
       console.log("Invitation received:", data);
